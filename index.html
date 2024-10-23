@@ -11,10 +11,36 @@
     <h1 id="title">Survey Form</h1>
     <p id="description">Please answer all questions and fill in the required information.</p>
     <form id="survey-form">
-    <fieldset>
-      <label for="name">Enter your name: <input id="name" type="text" required/></label>
-      <label>Enter your email: <input id="email" pattern="[a-z0-9._]+@[com]" required/></label>
-      <label>Enter your password: <input id="number" pattern="[0-9]" min="0" max="9" required></label>
+      <label for="name" id="name-label" >Name: <input id="name" type="text" placeholder="Enter your full name" required/></label>
+      <label for="email" id="email-label">Email: <input id="email" type="email" pattern="[a-z0-9._]+@[com]" placeholder="Enter your email" required/></label>
+      <label for="password" id="number-label">Password: <input id="number" pattern="[0-9]" min="0" max="9" placeholder="Enter your password" required></label>
+
+      <label for="current-role">Which option best describes your current ownership status?
+        <select id="dropdown" name="current-role">
+          <option value="">(select one)</option>
+          <option value="1">No ownership</option>
+          <option value="2">Own 1 pet</option>
+          <option value="3"> Own 2 pets</option>
+          <option value="4">Own 3+ pets</option>
+        </select>
+      </label>
+
+      <legend>What kind of pet do you have? (required)</legend>
+      <label for="cat"><input id="type-cat"type="radio" name="animal-type" value="cat" class="inline" checked >Cat</label>
+      <label for="dog"><input id="type-dog"type="radio" name="animal-type" value="dog" class="inline">Dog</label>
+      <label for="other"><input id="type-other" type="radio" name="animal-type" value="other" class="inline">Other obscure animal</label>
+
+      <legend>What kind of pets have you always dreamed of having?</legend>
+      <input id="cat" type="checkbox" value="cat" class="inline">Cat<label for="cat"></label>
+      <input id="dog" type="checkbox" value="dog" class="inline"><label for="dog">Dog</label>
+      <input id="tiger" type="checkbox" value="tiger" class="inline"><label for="tiger">Tiger</label>
+      
+        
+
+    </form>
+    
+      
+
     </form>
   </body>
 </html>
