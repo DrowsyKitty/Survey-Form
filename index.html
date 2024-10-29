@@ -13,7 +13,7 @@
     <form id="survey-form">
       <label for="name" id="name-label" >Name: <input id="name" type="text" placeholder="Enter your full name" required/></label>
       <label for="email" id="email-label">Email: <input id="email" type="email" pattern="[a-z0-9._]+@[com]" placeholder="Enter your email" required/></label>
-      <label for="password" id="number-label">Password: <input id="number" pattern="[0-9]" min="0" max="9" placeholder="Enter your password" required></label>
+      <label for="password" id="number-label">Password: <input id="number" type="number" pattern="[0-9]" min="0" max="9" placeholder="Enter your password" required></label>
 
       <label for="current-role">Which option best describes your current ownership status?
         <select id="dropdown" name="current-role">
@@ -30,7 +30,7 @@
       <label for="dog"><input id="type-dog"type="radio" name="animal-type" value="dog" class="inline">Dog</label>
       <label for="other"><input id="type-other" type="radio" name="animal-type" value="other" class="inline">Other obscure animal</label>
 
-      <legend>What kind of pets have you always dreamed of having?</legend>
+      <legend>What kind of pets have you always dreamed of having?(Check all that apply)</legend>
       <input id="cat" type="checkbox" value="cat" class="inline">Cat<label for="cat"></label>
       <input id="dog" type="checkbox" value="dog" class="inline"><label for="dog">Dog</label>
       <input id="tiger" type="checkbox" value="tiger" class="inline"><label for="tiger">Tiger</label>
