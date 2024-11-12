@@ -30,36 +30,96 @@
             </div>
           </div>
 
+          <!--Email field-->
+          <div class="field">
+            <label class="label" for="email">Email</label>
+            <div class="control">
+              <input id="email" type="email" class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$]" placeholder="Enter your email" required/></label>
+            </div>
+          </div>
 
-          <label for="email" id="email-label">Email: <input id="email" type="email" pattern="[a-z0-9._]+@[com]" placeholder="Enter your email" required/></label>
-          <label for="password" id="number-label">Password: <input id="number" type="number" pattern="[0-9]" min="0" max="9" placeholder="Enter your password" required></label>
+          <!--Password field-->
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control">
+              <input id="number" type="password" class="input" pattern="[0-9]" min="0" max="9" placeholder="Enter your password" required></label>
+            </div>
+          </div>
 
-          <label for="current-role">Which option best describes your current ownership status?
-            <select id="dropdown" name="current-role">
-              <option value="">(select one)</option>
-              <option value="1">No ownership</option>
-              <option value="2">Own 1 pet</option>
-              <option value="3"> Own 2 pets</option>
-              <option value="4">Own 3+ pets</option>
-            </select>
-          </label>
+          <!--Dropdown for ownership status-->
+          <div class="field">
+            <label class="label" for="current-role">Which option best describes your current ownership status?</label>
+            <div class="control">
+              <div class="select">
+                <select id="dropdown" name="current-role">
+                  <option value="">(select one)</option>
+                  <option value="1">No ownership</option>
+                  <option value="2">Own 1 pet</option>
+                  <option value="3"> Own 2 pets</option>
+                  <option value="4">Own 3+ pets</option>
+                </select>
+              </div>
+            </div>
+          </div>
+            
+          <!--Radio buttons for animal type-->
+          <div class="field">
+            <legend>What kind of pet do you have? (required)</legend>
+            <div class="control">
+              <label class="radio">
+                <input id="type-cat" type="radio" name="animal-type" value="cat" checked>
+                Cat
+              </label>
 
-          <legend>What kind of pet do you have? (required)</legend>
-          <label for="cat"><input id="type-cat"type="radio" name="animal-type" value="cat" class="inline" checked >Cat</label>
-          <label for="dog"><input id="type-dog"type="radio" name="animal-type" value="dog" class="inline">Dog</label>
-          <label for="other"><input id="type-other" type="radio" name="animal-type" value="other" class="inline">Other obscure animal</label>
+              <label class="radio">
+                <input id="type-dog" type="radio" name="animal-type" value="dog">
+                Dog
+              </label>
 
-          <legend>What kind of pets have you always dreamed of having?(Check all that apply)</legend>
-          <input id="cat" type="checkbox" value="cat" class="inline">Cat<label for="cat"></label>
-          <input id="dog" type="checkbox" value="dog" class="inline"><label for="dog">Dog</label>
-          <input id="tiger" type="checkbox" value="tiger" class="inline"><label for="tiger">Tiger</label>
+              <label class="radio">
+                <input id="type-other" type="radio" name="animal-type" value="other">
+                Other obscure animal
+              </label>
+            </div>
+          </div>
+
+          <!--Checkboxes for dream pets-->
+          <div class="field">
+            <legend>What kind of pets have you always dreamed of having?(Check all that apply)</legend>
+            <div class="control">
+              <label class="checkbox">
+                <input id="dream-cat" type="checkbox" value="cat">
+                Cat
+              </label>
+
+              <label class="checkbox">
+                <input id="dream-dog" type="checkbox" value="dog">
+                Dog
+              </label>
+
+              <label class="checkbox">
+                <input id="dream-tiger" type="checkbox" value="tiger">
+                Tiger
+              </label>
+            </div>
+          </div>
           
-          <label for="comments">Comments and concerns?
-            <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I think that...or I have concerns about..."></textarea>
-          </label>
-          <input id="submit" type="submit" value="Submit"/>
-      
+        
+          <!--Comments section-->
+          <div class="field">
+            <label class="label" for="comments">Comments and concerns?</label>
+            <div class="control">
+              <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I think that...or I have concerns about..."></textarea>
+            </div>
+          </div>
           
+          <div class="field">
+            <div class="control">
+              <button id="submit" type="submit" class="button is-primary is-halfwidth is-fullwidth" >Submit</button>
+            </div>
+          </div>
+
+    
             
 
         </form>
@@ -70,8 +130,7 @@
 
       </div>
       
-      
-
+    
     </section>
     
   </body>
